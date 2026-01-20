@@ -20,6 +20,7 @@ pipeline {
 
                         ssh -i $SSH_KEY -o StrictHostKeyChecking=no ${PI_USER}@${PI_HOST} '
                             cd ~/byteboard-service-k8s
+                            export KUBECONFIG=~/.kube/config
                             export $(cat .env | xargs)
 
                             for file in k8s/*.yaml; do
