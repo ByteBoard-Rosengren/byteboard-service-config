@@ -13,3 +13,4 @@ data:
   SECRETS_PATH: "/secrets"
   POSTGRES_PASSWORD_FILE: "/secrets/db-password"
   PORT: "${PORT}"
+  ALLOWED_ORIGINS: "https://byteboard.win"
